@@ -87,6 +87,41 @@
 
 
 
+<style type="text/css">
+  .playslide {
+      font-size: 50px;
+      position: absolute;
+      z-index: 9999;
+      top: 45%;
+      right: 45%;
+      background: white;
+      padding: 6px 40px;
+      border-radius: 4px;
+      cursor: pointer;
+
+  }
+
+  .logoh{
+
+       position: absolute;
+       top: 1%;
+       right: 44%;
+       z-index: 999;
+  }
+  .thumbnail>a.vidtool {
+    display: block;
+    position: absolute;
+    top: 33%;
+    left: 38%;
+    background: #e45414;
+    color: #ffffff;
+    font-size: 20px;
+    padding: 7px 20px;
+    border-radius: 7px;
+  }
+
+</style>
+
 
 <nav class="navbar navbar-inverse">
   <div class="container-fluid" style="padding-left: 50px;padding-right: 50px">
@@ -103,18 +138,18 @@
        
          <li class="active"><a href="index.php">Home	</a></li>
        
-         <li class="dropdown "><a href="products.php">Ladies Jewllery <b class="caret"></b></a>
+         <li class="dropdown "><a href="products.php">Jewllery <b class="caret"></b></a>
          	<ul class="dropdown-menu">
-       	  <li class=""><a href="products.php">Jewllery 1</a></li>
-       	  <li class=""><a href="products.php">Jewllery 2</a></li>
-       	  <li class=""><a href="products.php">Jewllery 3</a></li>
+       	  <li class=""><a href="products.php">Jewllery Category 1</a></li>
+       	  <li class=""><a href="products.php">Jewllery Category 2</a></li>
+       	  <li class=""><a href="products.php">Jewllery Category 3</a></li>
          	</ul>
           </li>
-         <li class="dropdown"><a href="products.php">Ladies Makeup  <b class="caret"></b></a>
+         <li class="dropdown"><a href="products.php">Makeup  <b class="caret"></b></a>
          	<ul class="dropdown-menu">
-       	  <li class=""><a href="products.php">Makeup 1</a></li>
-       	  <li class=""><a href="products.php">Makeup 2</a></li>
-       	  <li class=""><a href="products.php">Makeup 3</a></li>
+       	  <li class=""><a href="products.php">Makeup Category 1</a></li>
+       	  <li class=""><a href="products.php">Makeup Category 2</a></li>
+       	  <li class=""><a href="products.php">Makeup Category 3</a></li>
          	</ul>
           </li>
        	
@@ -125,23 +160,45 @@
        
        <ul class="nav pull-right">
        <li class="dropdown">
-       	<a data-toggle="dropdown" style="color:#e46128;margin-top: 15px" class="dropdown-toggle" href="#"><span class="icon-shopping-cart"></span> Cart <b class="caret"></b></a>
+        <a data-toggle="dropdown" style="color:#e46128;margin-top: 15px" class="dropdown-toggle" href="#"><span class="icon-shopping-cart"></span> Cart <b class="caret"></b></a>
+        <div class="dropdown-menu">
+          <div class="" style="padding: 10px 25px">
+        <table class="table " style="min-width: 300px;">
+          <tr><th>Product</th><th>Price</th></tr>
+          <tr><td>Product 1 </td><td style="width: 100px">Rs. 1000/-</td></tr>
+          <tr><td>Product 2 </td><td style="width: 100px">Rs. 8000/-</td></tr>
+
+
+        </table>
+        <div  style="float: right;">
+        <h3>Total : Rs. 9000/-</h3>
+        <a href="checkout.php" class="btn btn-primary">Checkout</a>
+       </div>
+        </div>
+        </div>
+       </li>
+   </ul>
+       <ul class="nav pull-right">
+       <li class="dropdown">
+       	<a data-toggle="dropdown" style="color:#e46128;margin-top: 15px" class="dropdown-toggle" href="#"><span class="icon-lock"></span> Login <b class="caret"></b></a>
        	<div class="dropdown-menu">
           <div class="" style="padding: 10px 15px">
-       	<table class="table">
-          <tr><td>Product 1 </td><td>Price</td></tr>
-          <tr><td>Product 1 </td><td>Price</td></tr>
-          <tr><td>Product 1 </td><td>Price</td></tr>
-        </table>
+          <input type="text" placeholder="Username" class="search-query form-control" style="    min-width: 200px;margin-top: 15px;">
+          <input type="text" placeholder="Password" class="search-query form-control" style="    min-width: 200px;margin-top: 15px;">
+          <br>
+         <a href="login.php" class="btn btn-primary" >Sign In</a>
 
-        <a href="#" style="float: right">Checkout</a>
+       
+
+
+        <a href="signup.php" class="btn btn-default" style="float: right">Sign Up?</a>
 
         </div>
        	</div>
        </li>
    </ul>
    <form action="#" class="navbar-search pull-right  ">
-          <input type="text" placeholder="Search Products" class="search-query form-control" style="margin-top: 15px;">
+          <input type="text" placeholder="Search Products" class="search-query form-control" style="    min-width: 300px;margin-top: 20px;">
    </form>
     </div>
   </div>

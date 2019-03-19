@@ -1,5 +1,33 @@
 
+<section class="our_client">
+	<hr class="soften"/>
+	<h4 class="title cntr"><span class="text">Manufactures</span></h4>
+	<hr class="soften"/>
+	<div class="row" style="margin-left: 15px;margin-right: 0px;">
+		<div class="col-md-2">
+			<a href="#"><img alt="" src="assets/img/1.png"></a>
+		</div>
+		<div class="col-md-2">
+			<a href="#"><img alt="" src="assets/img/2.png"></a>
+		</div>
+		<div class="col-md-2">
+			<a href="#"><img alt="" src="assets/img/3.png"></a>
+		</div>
+		<div class="col-md-2">
+			<a href="#"><img alt="" src="assets/img/4.png"></a>
+		</div>
+		<div class="col-md-2">
+			<a href="#"><img alt="" src="assets/img/5.png"></a>
+		</div>
+		<div class="col-md-2">
+			<a href="#"><img alt="" src="assets/img/6.png"></a>
+		</div>
+	</div>
+</section>
 
+
+
+	
 
 
 

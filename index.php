@@ -6,13 +6,7 @@
 	<?php include 'include/head.php'; ?>
 	<title>Shoping Website</title>
 
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Ashop Slider - Slider Revolution</title>
-	<meta name="description" content="Slider Revolution Example" />
-	<meta name="keywords" content="fullscreen image, grid layout, flexbox grid, transition" />
-	<meta name="author" content="ThemePunch" />
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
 
 	<!-- LOAD JQUERY LIBRARY -->
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.js"></script>
@@ -39,71 +33,42 @@
 	<script type="text/javascript" src="sliderjs/extensions/revolution.extension.video.min.js"></script>
 
 
-		<style type="text/css">
-
-		.rev_slider li.tp-revslider-slidesli {
-			position: absolute !important;
-			border-radius: 2% !important;
-			height: 500px !important;
-		}
-
-
-	</style>
-
-
 	<style type="text/css">
-		.playslide {
-		    font-size: 50px;
-		    position: absolute;
-		    z-index: 9999;
-		    top: 45%;
-		    right: 45%;
-		    background: white;
-		    padding: 6px 40px;
-		    border-radius: 4px;
-		    cursor: pointer;
 
-		}
-
-		.logoh{
-
-			   position: absolute;
-			   top: 1%;
-			   right: 44%;
-			   z-index: 999;
-		}
-		.thumbnail>a.vidtool {
-			display: block;
-			position: absolute;
-			top: 33%;
-			left: 38%;
-			background: #e45414;
-			color: #ffffff;
-			font-size: 20px;
-			padding: 7px 20px;
-			border-radius: 7px;
-		}
-		.tp-tabs, .tp-thumbs {
-
-		    display: none;
-		}
-		.fullwidthbanner-container .fullwidthabanner {
-		    width: 100%;
-		    position: relative;
-		    height: 550px !important;
-		    top: 20px;
-		}
-
-		.tparrows.tp-rightarrow:before {
-		    content: ">";
-		}
-
-		.tparrows.tp-leftarrow:before {
-		    content: "<";
-		}
+	.rev_slider li.tp-revslider-slidesli {
+		position: absolute !important;
+		border-radius: 2% !important;
+		height: 500px !important;
+	}
 
 
-	</style>
+
+	.tp-tabs, .tp-thumbs {
+
+	    display: none;
+	}
+	.fullwidthbanner-container .fullwidthabanner {
+	    width: 100%;
+	    position: relative;
+	    height: 550px !important;
+	    top: 20px;
+	}
+
+	.tparrows.tp-rightarrow:before {
+	    content: ">";
+	}
+
+	.tparrows.tp-leftarrow:before {
+	    content: "<";
+	}
+
+	
+
+
+</style>
+
+
+
 
 </head>
 
@@ -112,57 +77,57 @@
 
 
 
-<?php include 'include/header.php'; ?>
+	<?php include 'include/header.php'; ?>
 
 
 
-<div id="rev_slider_5_1_wrapper" class="rev_slider_wrapper fullwidthbanner-container" data-alias="ashop" data-source="gallery" style="margin:0px auto;background:transparent;padding:0px;margin-top:0px;margin-bottom:0px;">
-	<!-- START REVOLUTION SLIDER 5.4.7.2 fullwidth mode -->
-	<div id="rev_slider_5_1" class="rev_slider fullwidthabanner" style="display:none;" data-version="5.4.7.2">
-		<ul>	
-
-
-
-
-
-
-
-			<!-- SLIDE  -->
-			<li>
-
-				<iframe width="100%" height="100%" src="https://www.youtube.com/embed/FRR0pLH6mJM?autoplay=1&mute=1&showinfo=0&controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-
-			</li>
-
-			<!-- SLIDE  -->
-			<li>
-
-				<iframe width="100%" height="100%" src="https://www.youtube.com/embed/KAlZqj90PWg?autoplay=1&mute=1&showinfo=0&controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-
-			</li>
-
-
-
-
-			<!-- SLIDE  -->
-			<li>
-
-				<iframe width="100%" height="100%" src="https://www.youtube.com/embed/PAG6-NHQuyc?autoplay=1&mute=1&showinfo=0&controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-
-			</li>
+		<div id="rev_slider_5_1_wrapper" class="rev_slider_wrapper fullwidthbanner-container" data-alias="ashop" data-source="gallery" style="margin:0px auto;background:transparent;padding:0px;margin-top:0px;margin-bottom:0px;">
+			<!-- START REVOLUTION SLIDER 5.4.7.2 fullwidth mode -->
+			<div id="rev_slider_5_1" class="rev_slider fullwidthabanner" style="display:none;" data-version="5.4.7.2">
+				<ul>	
 
 
 
 
 
-		</ul>
+
+
+					<!-- SLIDE  -->
+					<li>
+
+						<iframe width="100%" height="100%" src="https://www.youtube.com/embed/FRR0pLH6mJM?autoplay=1&mute=1&showinfo=0&controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+					</li>
+
+					<!-- SLIDE  -->
+					<li>
+
+						<iframe width="100%" height="100%" src="https://www.youtube.com/embed/KAlZqj90PWg?autoplay=1&mute=1&showinfo=0&controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+					</li>
 
 
 
-	</div><!-- END REVOLUTION SLIDER -->
+
+					<!-- SLIDE  -->
+					<li>
+
+						<iframe width="100%" height="100%" src="https://www.youtube.com/embed/PAG6-NHQuyc?autoplay=1&mute=1&showinfo=0&controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+					</li>
+
+
+
+
+
+				</ul>
+
+
+
+			</div><!-- END REVOLUTION SLIDER -->
 
 
 
@@ -226,473 +191,425 @@
 				</div>
 				<div class="col-md-9">
 
-	<!--
-	New Products
-	-->
-	<div class="well well-small">
-		<h3>New Arrivals </h3>
-		<hr class="soften"/>
-		<div class="row-fluid">
-			<div id="newProductCar" class="carousel slide">
-				<div class="carousel-inner">
-					<div class="item active">
-						<div class="thumbnails">
-							<div class="col-md-3">
 
-								<div class="thumbnail">
-									<a class="vidtool viewf " href="product_detail.php" title="add to cart"><span class="icon-play"></span> </a>
-									<a href="#" class="tag"></a>
-									<a href="product_detail.php" id="xyz"><img src="assets/img/bootstrap-ring.png" alt="bootstrap-ring"></a>
-									
+					<div class="well well-small">
+						<h3>New Arrivals </h3>
+						<hr class="soften"/>
+						<div class="row-fluid">
+							<div id="newProductCar" class="carousel slide">
+								<div class="carousel-inner">
+									<div class="item active">
+										<div class="thumbnails">
+											<div class="col-md-3">
 
+												<div class="thumbnail">
+													<a class="vidtool viewf " href="product_detail.php" title="add to cart"><span class="icon-play"></span> </a>
+													<a href="#" class="tag"></a>
+													<a href="product_detail.php" id="xyz"><img src="assets/img/bootstrap-ring.png" alt="bootstrap-ring"></a>
+
+
+												</div>
+											</div>
+											<div class="col-md-3">
+												<div class="thumbnail">
+													<a class="vidtool viewf " href="product_detail.php" title="add to cart"><span class="icon-play"></span> </a>
+													<a href="#" class="tag"></a>
+													<a  href="product_detail.php" id="xyz1"><img src="assets/img/i.jpg" alt=""></a>
+												</div>
+											</div>
+											<div class="col-md-3">
+												<div class="thumbnail">
+													<a class="vidtool viewf " href="product_detail.php" title="add to cart"><span class="icon-play"></span> </a>
+													<a href="#" class="tag"></a>
+													<a  href="product_detail.php" id="xyz2"><img src="assets/img/g.jpg" alt=""></a>
+												</div>
+											</div>
+											<div class="col-md-3">
+												<div class="thumbnail">
+													<a class="vidtool viewf " href="product_detail.php" title="add to cart"><span class="icon-play"></span> </a>
+													<a  href="product_detail.php"><img src="assets/img/s.png" alt=""></a>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="item">
+										<div class="thumbnails">
+											<div class="col-md-3">
+												<div class="thumbnail">
+													<a class="vidtool viewf " href="product_detail.php" title="add to cart"><span class="icon-play"></span> </a>
+													<a  href="product_detail.php"><img src="assets/img/i.jpg" alt=""></a>
+												</div>
+											</div>
+											<div class="col-md-3">
+												<div class="thumbnail">
+													<a class="vidtool viewf " href="product_detail.php" title="add to cart"><span class="icon-play"></span> </a>
+													<a  href="product_detail.php"><img src="assets/img/f.jpg" alt=""></a>
+												</div>
+											</div>
+											<div class="col-md-3">
+												<div class="thumbnail">
+													<a class="vidtool viewf " href="product_detail.php" title="add to cart"><span class="icon-play"></span> </a>
+													<a  href="product_detail.php"><img src="assets/img/h.jpg" alt=""></a>
+												</div>
+											</div>
+											<div class="col-md-3">
+												<div class="thumbnail">
+													<a class="vidtool viewf " href="product_detail.php" title="add to cart"><span class="icon-play"></span> </a>
+													<a  href="product_detail.php"><img src="assets/img/j.jpg" alt=""></a>
+												</div>
+											</div>
+										</div>
+									</div>
 								</div>
-							</div>
-							<div class="col-md-3">
-								<div class="thumbnail">
-									<a class="vidtool viewf " href="product_detail.php" title="add to cart"><span class="icon-play"></span> </a>
-									<a href="#" class="tag"></a>
-									<a  href="product_detail.php" id="xyz1"><img src="assets/img/i.jpg" alt=""></a>
-								</div>
-							</div>
-							<div class="col-md-3">
-								<div class="thumbnail">
-									<a class="vidtool viewf " href="product_detail.php" title="add to cart"><span class="icon-play"></span> </a>
-									<a href="#" class="tag"></a>
-									<a  href="product_detail.php" id="xyz2"><img src="assets/img/g.jpg" alt=""></a>
-								</div>
-							</div>
-							<div class="col-md-3">
-								<div class="thumbnail">
-									<a class="vidtool viewf " href="product_detail.php" title="add to cart"><span class="icon-play"></span> </a>
-									<a  href="product_detail.php"><img src="assets/img/s.png" alt=""></a>
-								</div>
+								<a class="left carousel-control" href="#newProductCar" data-sdivde="prev">&lsaquo;</a>
+								<a class="right carousel-control" href="#newProductCar" data-sdivde="next">&rsaquo;</a>
 							</div>
 						</div>
+
 					</div>
-					<div class="item">
+
+
+					<div class="well well-small">
+						Discount Products 
+					</div>
+					<div class="row">
 						<div class="thumbnails">
+
 							<div class="col-md-3">
 								<div class="thumbnail">
+
 									<a class="vidtool viewf " href="product_detail.php" title="add to cart"><span class="icon-play"></span> </a>
-									<a  href="product_detail.php"><img src="assets/img/i.jpg" alt=""></a>
+									<a href="product_detail.php"><img src="assets/img/b.jpg" alt=""></a>
+									<div class="caption cntr">
+										<p>Item Name</p>
+										<p style="text-decoration:line-through;"><strong> $22.00</strong></p>
+										<p><strong> $20.00</strong></p>
+										<h4><a class="shopBtn atcm" href="#" title="add to cart"> Add to cart </a></h4>
+
+
+
+									</div>
 								</div>
 							</div>
 							<div class="col-md-3">
 								<div class="thumbnail">
+
 									<a class="vidtool viewf " href="product_detail.php" title="add to cart"><span class="icon-play"></span> </a>
-									<a  href="product_detail.php"><img src="assets/img/f.jpg" alt=""></a>
+									<a href="product_detail.php"><img src="assets/img/h.jpg" alt=""></a>
+									<div class="caption cntr">
+										<p>Item Name</p>
+										<p style="text-decoration:line-through;"><strong> $22.00</strong></p>
+										<p><strong> $20.00</strong></p>
+										<h4><a class="shopBtn atcm" href="#" title="add to cart"> Add to cart </a></h4>
+
+
+
+									</div>
 								</div>
 							</div>
 							<div class="col-md-3">
 								<div class="thumbnail">
+
 									<a class="vidtool viewf " href="product_detail.php" title="add to cart"><span class="icon-play"></span> </a>
-									<a  href="product_detail.php"><img src="assets/img/h.jpg" alt=""></a>
+									<a href="product_detail.php"><img src="assets/img/i.jpg" alt=""></a>
+									<div class="caption cntr">
+										<p>Item Name</p>
+										<p><strong> $22.00</strong></p>
+										<h4><a class="shopBtn atcm" href="#" title="add to cart"> Add to cart </a></h4>
+
+
+
+									</div>
 								</div>
 							</div>
 							<div class="col-md-3">
 								<div class="thumbnail">
+
 									<a class="vidtool viewf " href="product_detail.php" title="add to cart"><span class="icon-play"></span> </a>
-									<a  href="product_detail.php"><img src="assets/img/j.jpg" alt=""></a>
+									<a href="product_detail.php"><img src="assets/img/b.jpg" alt=""></a>
+									<div class="caption cntr">
+										<p>Item Name</p>
+										<p style="text-decoration:line-through;"><strong> $22.00</strong></p>
+										<p><strong> $20.00</strong></p>
+										<h4><a class="shopBtn atcm" href="#" title="add to cart"> Add to cart </a></h4>
+
+
+
+									</div>
 								</div>
 							</div>
+							<div class="col-md-3">
+								<div class="thumbnail">
+									<a class="vidtool viewf" href="product_detail.php" title="add to cart"><span class="icon-play"></span> </a>
+									<a href="product_detail.php"><img src="assets/img/c.jpg" alt=""></a>
+									<div class="caption cntr">
+										<p>Item Name</p>
+										<p style="text-decoration:line-through;"><strong> $22.00</strong></p>
+										<p><strong> $20.00</strong></p>
+										<h4><a class="shopBtn atcm" href="#" title="add to cart"> Add to cart </a></h4>
+
+
+
+									</div>
+								</div>
+							</div>
+							<div class="col-md-3">
+								<div class="thumbnail">
+									<a class="vidtool viewf" href="product_detail.php" title="add to cart"><span class="icon-play"></span> </a>
+									<a href="product_detail.php"><img src="assets/img/a.jpg" alt=""></a>
+									<div class="caption cntr">
+										<p>Item Name</p>
+										<p><strong> $22.00</strong></p>
+										<h4><a class="shopBtn atcm" href="#" title="add to cart"> Add to cart </a></h4>
+
+
+									</div>
+								</div>
+							</div>
+							<div class="col-md-3">
+								<div class="thumbnail">
+									<a class="vidtool viewf" href="product_detail.php" title="add to cart"><span class="icon-play"></span> </a>
+									<a href="product_detail.php"><img src="assets/img/j.jpg" alt=""></a>
+									<div class="caption cntr">
+										<p>Item Name</p>
+										<p style="text-decoration:line-through;"><strong> $22.00</strong></p>
+										<p><strong> $20.00</strong></p>
+										<h4><a class="shopBtn atcm" href="#" title="add to cart"> Add to cart </a></h4>
+
+
+
+									</div>
+								</div>
+							</div>
+
+							<div class="col-md-3">
+								<div class="thumbnail">
+									<a class="vidtool viewf" href="product_detail.php" title="add to cart"><span class="icon-play"></span> </a>
+									<a href="product_detail.php"><img src="assets/img/e.jpg" alt=""></a>
+									<div class="caption cntr">
+										<p>Item Name</p>
+										<p style="text-decoration:line-through;"><strong> $22.00</strong></p>
+										<p><strong> $20.00</strong></p>
+										<h4><a class="shopBtn atcm" href="#" title="add to cart"> Add to cart </a></h4>
+
+
+
+									</div>
+								</div>
+							</div>
+
 						</div>
 					</div>
-				</div>
-				<a class="left carousel-control" href="#newProductCar" data-sdivde="prev">&lsaquo;</a>
-				<a class="right carousel-control" href="#newProductCar" data-sdivde="next">&rsaquo;</a>
-			</div>
-		</div>
-
-	</div>
 
 
-	<div class="well well-small">
-		Discount Products 
-	</div>
-	<div class="row">
-		<div class="thumbnails">
-
-			<div class="col-md-3">
-				<div class="thumbnail">
-
-					<a class="vidtool viewf " href="product_detail.php" title="add to cart"><span class="icon-play"></span> </a>
-					<a href="product_detail.php"><img src="assets/img/b.jpg" alt=""></a>
-					<div class="caption cntr">
-						<p>Item Name</p>
-						<p style="text-decoration:line-through;"><strong> $22.00</strong></p>
-						<p><strong> $20.00</strong></p>
-						<h4><a class="shopBtn atcm" href="#" title="add to cart"> Add to cart </a></h4>
-					
-
-
+					<div class="well well-small">
+						Under Rs. 999/- Products 
 					</div>
-				</div>
-			</div>
-			<div class="col-md-3">
-				<div class="thumbnail">
+					<div class="row">
+						<div class="thumbnails">
 
-					<a class="vidtool viewf " href="product_detail.php" title="add to cart"><span class="icon-play"></span> </a>
-					<a href="product_detail.php"><img src="assets/img/h.jpg" alt=""></a>
-					<div class="caption cntr">
-						<p>Item Name</p>
-						<p style="text-decoration:line-through;"><strong> $22.00</strong></p>
-						<p><strong> $20.00</strong></p>
-						<h4><a class="shopBtn atcm" href="#" title="add to cart"> Add to cart </a></h4>
-						
+							<div class="col-md-3">
+								<div class="thumbnail">
+
+									<a class="vidtool viewf " href="product_detail.php" title="add to cart"><span class="icon-play"></span> </a>
+									<a href="product_detail.php"><img src="assets/img/b.jpg" alt=""></a>
+									<div class="caption cntr">
+										<p>Item Name</p>
+										<p><strong> $22.00</strong></p>
+										<h4><a class="shopBtn atcm" href="#" title="add to cart"> Add to cart </a></h4>
 
 
+
+									</div>
+								</div>
+							</div>
+							<div class="col-md-3">
+								<div class="thumbnail">
+
+									<a class="vidtool viewf " href="product_detail.php" title="add to cart"><span class="icon-play"></span> </a>
+									<a href="product_detail.php"><img src="assets/img/h.jpg" alt=""></a>
+									<div class="caption cntr">
+										<p>Item Name</p>
+										<p><strong> $22.00</strong></p>
+										<h4><a class="shopBtn atcm" href="#" title="add to cart"> Add to cart </a></h4>
+
+
+
+									</div>
+								</div>
+							</div>
+							<div class="col-md-3">
+								<div class="thumbnail">
+									<a class="vidtool viewf" href="product_detail.php" title="add to cart"><span class="icon-play"></span> </a>
+									<a href="product_detail.php"><img src="assets/img/c.jpg" alt=""></a>
+									<div class="caption cntr">
+										<p>Item Name</p>
+										<p><strong> $22.00</strong></p>
+										<h4><a class="shopBtn atcm" href="#" title="add to cart"> Add to cart </a></h4>
+
+
+
+									</div>
+								</div>
+							</div>
+							<div class="col-md-3">
+								<div class="thumbnail">
+									<a class="vidtool viewf" href="product_detail.php" title="add to cart"><span class="icon-play"></span> </a>
+									<a href="product_detail.php"><img src="assets/img/a.jpg" alt=""></a>
+									<div class="caption cntr">
+										<p>Item Name</p>
+										<p><strong> $22.00</strong></p>
+										<h4><a class="shopBtn atcm" href="#" title="add to cart"> Add to cart </a></h4>
+
+
+									</div>
+								</div>
+							</div>
+
+
+						</div>
 					</div>
-				</div>
-			</div>
-			<div class="col-md-3">
-				<div class="thumbnail">
 
-					<a class="vidtool viewf " href="product_detail.php" title="add to cart"><span class="icon-play"></span> </a>
-					<a href="product_detail.php"><img src="assets/img/i.jpg" alt=""></a>
-					<div class="caption cntr">
-						<p>Item Name</p>
-						<p><strong> $22.00</strong></p>
-						<h4><a class="shopBtn atcm" href="#" title="add to cart"> Add to cart </a></h4>
-						
-
-
-					</div>
-				</div>
-			</div>
-			<div class="col-md-3">
-				<div class="thumbnail">
-
-					<a class="vidtool viewf " href="product_detail.php" title="add to cart"><span class="icon-play"></span> </a>
-					<a href="product_detail.php"><img src="assets/img/b.jpg" alt=""></a>
-					<div class="caption cntr">
-						<p>Item Name</p>
-						<p style="text-decoration:line-through;"><strong> $22.00</strong></p>
-						<p><strong> $20.00</strong></p>
-						<h4><a class="shopBtn atcm" href="#" title="add to cart"> Add to cart </a></h4>
-						
-
-
-					</div>
-				</div>
-			</div>
-			<div class="col-md-3">
-				<div class="thumbnail">
-					<a class="vidtool viewf" href="product_detail.php" title="add to cart"><span class="icon-play"></span> </a>
-					<a href="product_detail.php"><img src="assets/img/c.jpg" alt=""></a>
-					<div class="caption cntr">
-						<p>Item Name</p>
-						<p style="text-decoration:line-through;"><strong> $22.00</strong></p>
-						<p><strong> $20.00</strong></p>
-						<h4><a class="shopBtn atcm" href="#" title="add to cart"> Add to cart </a></h4>
-					
-
-
-					</div>
-				</div>
-			</div>
-			<div class="col-md-3">
-				<div class="thumbnail">
-					<a class="vidtool viewf" href="product_detail.php" title="add to cart"><span class="icon-play"></span> </a>
-					<a href="product_detail.php"><img src="assets/img/a.jpg" alt=""></a>
-					<div class="caption cntr">
-						<p>Item Name</p>
-						<p><strong> $22.00</strong></p>
-						<h4><a class="shopBtn atcm" href="#" title="add to cart"> Add to cart </a></h4>
-						 
-
-					</div>
-				</div>
-			</div>
-			<div class="col-md-3">
-				<div class="thumbnail">
-					<a class="vidtool viewf" href="product_detail.php" title="add to cart"><span class="icon-play"></span> </a>
-					<a href="product_detail.php"><img src="assets/img/j.jpg" alt=""></a>
-					<div class="caption cntr">
-						<p>Item Name</p>
-						<p style="text-decoration:line-through;"><strong> $22.00</strong></p>
-						<p><strong> $20.00</strong></p>
-						<h4><a class="shopBtn atcm" href="#" title="add to cart"> Add to cart </a></h4>
-					
-
-
-					</div>
-				</div>
-			</div>
-
-			<div class="col-md-3">
-				<div class="thumbnail">
-					<a class="vidtool viewf" href="product_detail.php" title="add to cart"><span class="icon-play"></span> </a>
-					<a href="product_detail.php"><img src="assets/img/e.jpg" alt=""></a>
-					<div class="caption cntr">
-						<p>Item Name</p>
-						<p style="text-decoration:line-through;"><strong> $22.00</strong></p>
-						<p><strong> $20.00</strong></p>
-						<h4><a class="shopBtn atcm" href="#" title="add to cart"> Add to cart </a></h4>
-					
-
-
-					</div>
-				</div>
-			</div>
-
-		</div>
-	</div>
-
-
-	<div class="well well-small">
-		Under Rs. 999/- Products 
-	</div>
-	<div class="row">
-		<div class="thumbnails">
-
-			<div class="col-md-3">
-				<div class="thumbnail">
-
-					<a class="vidtool viewf " href="product_detail.php" title="add to cart"><span class="icon-play"></span> </a>
-					<a href="product_detail.php"><img src="assets/img/b.jpg" alt=""></a>
-					<div class="caption cntr">
-						<p>Item Name</p>
-						<p><strong> $22.00</strong></p>
-						<h4><a class="shopBtn atcm" href="#" title="add to cart"> Add to cart </a></h4>
-					
-
-
-					</div>
-				</div>
-			</div>
-			<div class="col-md-3">
-				<div class="thumbnail">
-
-					<a class="vidtool viewf " href="product_detail.php" title="add to cart"><span class="icon-play"></span> </a>
-					<a href="product_detail.php"><img src="assets/img/h.jpg" alt=""></a>
-					<div class="caption cntr">
-						<p>Item Name</p>
-						<p><strong> $22.00</strong></p>
-						<h4><a class="shopBtn atcm" href="#" title="add to cart"> Add to cart </a></h4>
-						
-
-
-					</div>
-				</div>
-			</div>
-			<div class="col-md-3">
-				<div class="thumbnail">
-					<a class="vidtool viewf" href="product_detail.php" title="add to cart"><span class="icon-play"></span> </a>
-					<a href="product_detail.php"><img src="assets/img/c.jpg" alt=""></a>
-					<div class="caption cntr">
-						<p>Item Name</p>
-						<p><strong> $22.00</strong></p>
-						<h4><a class="shopBtn atcm" href="#" title="add to cart"> Add to cart </a></h4>
-					
-
-
-					</div>
-				</div>
-			</div>
-			<div class="col-md-3">
-				<div class="thumbnail">
-					<a class="vidtool viewf" href="product_detail.php" title="add to cart"><span class="icon-play"></span> </a>
-					<a href="product_detail.php"><img src="assets/img/a.jpg" alt=""></a>
-					<div class="caption cntr">
-						<p>Item Name</p>
-						<p><strong> $22.00</strong></p>
-						<h4><a class="shopBtn atcm" href="#" title="add to cart"> Add to cart </a></h4>
-						 
-
-					</div>
 				</div>
 			</div>
 
 
-		</div>
-	</div>
-
-	</div>
-	</div>
 
 
 
-	<!-- 
-	Clients 
-	-->
-	<section class="our_client">
-		<hr class="soften"/>
-		<h4 class="title cntr"><span class="text">Manufactures</span></h4>
-		<hr class="soften"/>
-		<div class="row">
-			<div class="col-md-2">
-				<a href="#"><img alt="" src="assets/img/1.png"></a>
-			</div>
-			<div class="col-md-2">
-				<a href="#"><img alt="" src="assets/img/2.png"></a>
-			</div>
-			<div class="col-md-2">
-				<a href="#"><img alt="" src="assets/img/3.png"></a>
-			</div>
-			<div class="col-md-2">
-				<a href="#"><img alt="" src="assets/img/4.png"></a>
-			</div>
-			<div class="col-md-2">
-				<a href="#"><img alt="" src="assets/img/5.png"></a>
-			</div>
-			<div class="col-md-2">
-				<a href="#"><img alt="" src="assets/img/6.png"></a>
-			</div>
-		</div>
-	</section>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-	<script type="text/javascript">
-		var revapi5,
-		tpj;	
-		(function() {			
-			if (!/loaded|interactive|complete/.test(document.readyState)) document.addEventListener("DOMContentLoaded",onLoad); else onLoad();	
-			function onLoad() {				
-				if (tpj===undefined) { tpj = jQuery; if("off" == "on") tpj.noConflict();}
-				if(tpj("#rev_slider_5_1").revolution == undefined){
-					revslider_showDoubleJqueryError("#rev_slider_5_1");
-				}else{
-					revapi5 = tpj("#rev_slider_5_1").show().revolution({
-						sliderType:"carousel",
-						jsFileLocation:"//insideweb.com.pk/wp-content/plugins/revslider/public/assets/sliderjs/",
-						sliderLayout:"fullwidth",
-						dottedOverlay:"none",
-						delay:9000,
-						navigation: {
-							keyboardNavigation:"off",
-							keyboard_direction: "horizontal",
-							mouseScrollNavigation:"off",
-							mouseScrollReverse:"default",
-							onHoverStop:"off",
-							touch:{
-								touchenabled:"on",
-								touchOnDesktop:"off",
-								swipe_threshold: 75,
-								swipe_min_touches: 50,
-								swipe_direction: "horizontal",
-								drag_block_vertical: false
-							}
-							,
-							arrows: {
-								style:"hesperiden",
-								enable:true,
-								hide_onmobile:false,
-								hide_onleave:false,
-								tmp:'',
-								left: {
-									h_align:"left",
-									v_align:"center",
-									h_offset:30,
-									v_offset:0
+			<script type="text/javascript">
+				var revapi5,
+				tpj;	
+				(function() {			
+					if (!/loaded|interactive|complete/.test(document.readyState)) document.addEventListener("DOMContentLoaded",onLoad); else onLoad();	
+					function onLoad() {				
+						if (tpj===undefined) { tpj = jQuery; if("off" == "on") tpj.noConflict();}
+						if(tpj("#rev_slider_5_1").revolution == undefined){
+							revslider_showDoubleJqueryError("#rev_slider_5_1");
+						}else{
+							revapi5 = tpj("#rev_slider_5_1").show().revolution({
+								sliderType:"carousel",
+								jsFileLocation:"//insideweb.com.pk/wp-content/plugins/revslider/public/assets/sliderjs/",
+								sliderLayout:"fullwidth",
+								dottedOverlay:"none",
+								delay:9000,
+								navigation: {
+									keyboardNavigation:"off",
+									keyboard_direction: "horizontal",
+									mouseScrollNavigation:"off",
+									mouseScrollReverse:"default",
+									onHoverStop:"off",
+									touch:{
+										touchenabled:"on",
+										touchOnDesktop:"off",
+										swipe_threshold: 75,
+										swipe_min_touches: 50,
+										swipe_direction: "horizontal",
+										drag_block_vertical: false
+									}
+									,
+									arrows: {
+										style:"hesperiden",
+										enable:true,
+										hide_onmobile:false,
+										hide_onleave:false,
+										tmp:'',
+										left: {
+											h_align:"left",
+											v_align:"center",
+											h_offset:30,
+											v_offset:0
+										},
+										right: {
+											h_align:"right",
+											v_align:"center",
+											h_offset:30,
+											v_offset:0
+										}
+									}
+									,
+									thumbnails: {
+										style:"hades",
+										enable:true,
+										width:60,
+										height:60,
+										min_width:60,
+										wrapper_padding:20,
+										wrapper_color:"rgb(0,0,0)",
+										tmp:'<span class="tp-thumb-img-wrap">  <span class="tp-thumb-image"></span></span>',
+										visibleAmount:9,
+										hide_onmobile:false,
+										hide_onleave:false,
+										direction:"horizontal",
+										span:true,
+										position:"inner",
+										space:10,
+										h_align:"center",
+										v_align:"bottom",
+										h_offset:0,
+										v_offset:0
+									}
 								},
-								right: {
-									h_align:"right",
-									v_align:"center",
-									h_offset:30,
-									v_offset:0
+								carousel: {
+									border_radius: "50%",
+									minScale: 55,
+									vary_scale: "off",
+									horizontal_align: "center",
+									vertical_align: "center",
+									fadeout: "on",
+									vary_fade: "on",
+									maxVisibleItems: 5,
+									infinity: "on",
+									space: -150,
+									stretch: "off",
+									showLayersAllTime: "off",
+									easing: "Power3.easeInOut",
+									speed: "800"
+								},
+								visibilityLevels:[1240,1024,778,480],
+								gridwidth:800,
+								gridheight:800,
+								lazyType:"smart",
+								parallax: {
+									type:"mouse",
+									origo:"slidercenter",
+									speed:2000,
+									speedbg:0,
+									speedls:0,
+									levels:[2,3,4,5,6,7,12,16,10,50,47,48,49,50,51,55],
+								},
+								shadow:0,
+								spinner:"off",
+								stopLoop:"on",
+								stopAfterLoops:0,
+								stopAtSlide:1,
+								shuffle:"off",
+								autoHeight:"off",
+								hideThumbsOnMobile:"off",
+								hideSliderAtLimit:0,
+								hideCaptionAtLimit:0,
+								hideAllCaptionAtLilmit:0,
+								debugMode:false,
+								fallbacks: {
+									simplifyAll:"off",
+									nextSlideOnWindowFocus:"off",
+									disableFocusListener:false,
 								}
-							}
-							,
-							thumbnails: {
-								style:"hades",
-								enable:true,
-								width:60,
-								height:60,
-								min_width:60,
-								wrapper_padding:20,
-								wrapper_color:"rgb(0,0,0)",
-								tmp:'<span class="tp-thumb-img-wrap">  <span class="tp-thumb-image"></span></span>',
-								visibleAmount:9,
-								hide_onmobile:false,
-								hide_onleave:false,
-								direction:"horizontal",
-								span:true,
-								position:"inner",
-								space:10,
-								h_align:"center",
-								v_align:"bottom",
-								h_offset:0,
-								v_offset:0
-							}
-						},
-						carousel: {
-							border_radius: "50%",
-							minScale: 55,
-							vary_scale: "off",
-							horizontal_align: "center",
-							vertical_align: "center",
-							fadeout: "on",
-							vary_fade: "on",
-							maxVisibleItems: 5,
-							infinity: "on",
-							space: -150,
-							stretch: "off",
-							showLayersAllTime: "off",
-							easing: "Power3.easeInOut",
-							speed: "800"
-						},
-						visibilityLevels:[1240,1024,778,480],
-						gridwidth:800,
-						gridheight:800,
-						lazyType:"smart",
-						parallax: {
-							type:"mouse",
-							origo:"slidercenter",
-							speed:2000,
-							speedbg:0,
-							speedls:0,
-							levels:[2,3,4,5,6,7,12,16,10,50,47,48,49,50,51,55],
-						},
-						shadow:0,
-						spinner:"off",
-						stopLoop:"on",
-						stopAfterLoops:0,
-						stopAtSlide:1,
-						shuffle:"off",
-						autoHeight:"off",
-						hideThumbsOnMobile:"off",
-						hideSliderAtLimit:0,
-						hideCaptionAtLimit:0,
-						hideAllCaptionAtLilmit:0,
-						debugMode:false,
-						fallbacks: {
-							simplifyAll:"off",
-							nextSlideOnWindowFocus:"off",
-							disableFocusListener:false,
-						}
-					});
-				}; /* END OF revapi call */
+							});
+						}; /* END OF revapi call */
 
-			}; /* END OF ON LOAD FUNCTION */
-		}()); /* END OF WRAPPING FUNCTION */
-	</script>
+					}; /* END OF ON LOAD FUNCTION */
+				}()); /* END OF WRAPPING FUNCTION */
+			</script>
 
 
-</div>
-	<?php include 'include/bottombar.php'; ?>
+		</div>
+
+
+		
+		<?php include 'include/bottombar.php'; ?>
 
 
 
-</body>
-</html>
+	</body>
+	</html>
