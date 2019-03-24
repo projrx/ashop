@@ -7,10 +7,8 @@
 	<title>Shoping Website</title>
 
 	
-
 	<!-- LOAD JQUERY LIBRARY -->
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.js"></script>
-
 
 
 	<!-- REVOLUTION STYLE SHEETS -->
@@ -41,6 +39,13 @@
 		height: 500px !important;
 	}
 
+	li.tp-revslider-slidesli:not(.active-revslide) {
+	 
+
+	 border-radius: 4% !important;
+
+	}
+
 
 
 	.tp-tabs, .tp-thumbs {
@@ -62,19 +67,23 @@
 	    content: "<";
 	}
 
-	
 
+	
 
 </style>
 
+<script>    
+    if(typeof window.history.pushState == 'function') {
+        window.history.pushState({}, "Hide", "http://localhost/ashop2/index.php");
+    }
+</script>
 
 
 
 </head>
-
 <body>
 
-
+	<?php $link="home"; ?>
 
 
 	<?php include 'include/header.php'; ?>
@@ -90,38 +99,30 @@
 
 
 
+					<?php
+
+					$rows =mysqli_query($con,"SELECT * FROM slider  ORDER BY ordr" ) or die(mysqli_error($con));
+					$n=0;
+
+					while($row=mysqli_fetch_array($rows)){
+
+					  $name = $row['name']; 
+					  $vid = $row['vid']; 
+					  $ordr = $row['ordr']; 
+					  $id = $row['id']; 
 
 
-					<!-- SLIDE  -->
-					<li>
-
-						<iframe width="100%" height="100%" src="https://www.youtube.com/embed/FRR0pLH6mJM?autoplay=1&mute=1&showinfo=0&controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-
-					</li>
-
-					<!-- SLIDE  -->
-					<li>
-
-						<iframe width="100%" height="100%" src="https://www.youtube.com/embed/KAlZqj90PWg?autoplay=1&mute=1&showinfo=0&controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-
-					</li>
-
-
-
+					  ?>
 
 					<!-- SLIDE  -->
 					<li>
 
-						<iframe width="100%" height="100%" src="https://www.youtube.com/embed/PAG6-NHQuyc?autoplay=1&mute=1&showinfo=0&controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+						<iframe width="100%" height="100%" src="https://www.youtube.com/embed/<?php echo $vid ?>?autoplay=1&mute=1&showinfo=0&controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
 					</li>
 
-
-
-
+					<?php } ?>
 
 				</ul>
 
@@ -139,52 +140,103 @@
 				<div id="sidebar" class="col-md-3">
 					<div class="well well-small">
 						<ul class="nav nav-list">
-							<li><a href="products.html"><span class="icon-chevron-right"></span>Fashion</a></li>
-							<li><a href="products.html"><span class="icon-chevron-right"></span>Watches</a></li>
-							<li><a href="products.html"><span class="icon-chevron-right"></span>Fine Jewelry</a></li>
-							<li><a href="products.html"><span class="icon-chevron-right"></span>Fashion Jewelry</a></li>
-							<li><a href="products.html"><span class="icon-chevron-right"></span>Engagement & Wedding</a></li>
-							<li><a href="products.html"><span class="icon-chevron-right"></span>Men's Jewelry</a></li>
-							<li><a href="products.html"><span class="icon-chevron-right"></span>Vintage & Antique</a></li>
-							<li><a href="products.html"><span class="icon-chevron-right"></span>Loose Diamonds </a></li>
-							<li><a href="products.html"><span class="icon-chevron-right"></span>Loose Beads</a></li>
-							<li><a href="products.html"><span class="icon-chevron-right"></span>See All Jewelry & Watches</a></li>
-							<li style="border:0"> &nbsp;</li>
-							<li> <a class="totalInCart" href="cart.html"><strong>Total Amount  <span class="badge badge-warning pull-right" style="line-height:18px;">$448.42</span></strong></a></li>
+								<?php
+
+								$rowsx =mysqli_query($con,"SELECT name,slug FROM jewelrycat  ORDER BY ordr" ) or die(mysqli_error($con));
+								          
+								  while($rowx=mysqli_fetch_array($rowsx)){
+								    
+								    $slug = $rowx['slug']; 
+								    $name = $rowx['name']; 	
+
+								    ?>
+
+								<li><a href="jewelry.php?page_name=<?php echo $slug ?>"><span class="icon-chevron-right"></span><?php echo $name ?></a></li>
+
+							<?php } ?>
+								<?php
+
+								$rowsx =mysqli_query($con,"SELECT name,slug FROM makeupcat  ORDER BY ordr" ) or die(mysqli_error($con));
+								          
+								  while($rowx=mysqli_fetch_array($rowsx)){
+								    
+								    $slug = $rowx['slug']; 
+								    $name = $rowx['name']; 	
+
+								    ?>
+
+								<li><a href="makeup.php?page_name=<?php echo $slug ?>"><span class="icon-chevron-right"></span><?php echo $name ?></a></li>
+
+							<?php } ?>
 						</ul>
 					</div>
 
-					<div class="well well-small alert alert-warning cntr">
-						<h2>50% Discount</h2>
-						<p> 
-							only valid for online order. <br><br><a class="defaultBtn" href="#">Click here </a>
-						</p>
-					</div>
-					<div class="well well-small" ><a href="#"><img src="assets/img/paypal.jpg" alt="payment method paypal"></a></div>
+
+					<div class="well well-small" ><a href="#"><img class="form-control" style="height: 100px;" src="assets/img/paypal.jpg" alt="payment method paypal"></a></div>
 
 					<a class="shopBtn btn-block" href="#">Upcoming products <br><small>Click to view</small></a>
 					<br>
 					<br>
 					<ul class="nav nav-list promowrapper">
+						<?php
+
+						$rows =mysqli_query($con,"SELECT * FROM jewelry where feat=1  ORDER BY rand() LIMIT 1" ) or die(mysqli_error($con));
+						$n=0;
+
+						while($row=mysqli_fetch_array($rows)){
+
+						  $slug = $row['slug']; 
+						  $name = $row['name']; 
+						  $metak = $row['metak']; 
+						  $metad = $row['metad']; 
+						  $img = $row['img']; 
+						  $price = $row['price']; 
+						  $ordr = $row['ordr']; 
+						  $id = $row['id']; 
+						  $feat = $row['feat']; 
+
+						  ?>
 						<li>
 							<div class="thumbnail">
-								<a class="vidtool viewf " href="product_detail.php" title="add to cart"><span class="icon-play"></span> </a>
-								<img src="assets/img/bootstrap-ecommerce.png" alt="bootstrap ecommerce">
+								<a class="vidtool viewf " href="djewelry.php?page_name=<?php echo $slug ?>" title="add to cart"><span class="icon-play"></span> </a>
+								<img src="images/products/<?php echo $img ?>" alt="<?php echo $name ?>">
 								<div class="caption">
-									<h4><a class="defaultBtn" href="product_detail.php">VIEW</a> <span class="pull-right">$22.00</span></h4>
+									<h4><a class="defaultBtn" href="djewelry.php?page_name=<?php echo $slug ?>">VIEW</a> <span class="pull-right">Rs. <?php echo number_format($price) ?></span></h4>
 								</div>
 							</div>
 						</li>
-						<li style="border:0"> &nbsp;</li>
+						<?php } ?>
+
+<?php
+
+						$rows =mysqli_query($con,"SELECT * FROM makeup where feat=1  ORDER BY rand() LIMIT 1" ) or die(mysqli_error($con));
+						$n=0;
+
+						while($row=mysqli_fetch_array($rows)){
+
+						  $slug = $row['slug']; 
+						  $name = $row['name']; 
+						  $metak = $row['metak']; 
+						  $metad = $row['metad']; 
+						  $img = $row['img']; 
+						  $price = $row['price']; 
+						  $ordr = $row['ordr']; 
+						  $id = $row['id']; 
+						  $feat = $row['feat']; 
+
+						  ?>
 						<li>
 							<div class="thumbnail">
-								<a class="vidtool viewf " href="product_detail.php" title="add to cart"><span class="icon-play"></span> </a>
-								<img src="assets/img/shopping-cart-template.png" alt="shopping cart template">
+								<a class="vidtool viewf " href="dmakeup.php?page_name=<?php echo $slug ?>" title="add to cart"><span class="icon-play"></span> </a>
+								<img src="images/products/<?php echo $img ?>" alt="<?php echo $name ?>">
 								<div class="caption">
-									<h4><a class="defaultBtn" href="product_detail.php">VIEW</a> <span class="pull-right">$22.00</span></h4>
+									<h4><a class="defaultBtn" href="dmakeup.php?page_name=<?php echo $slug ?>">VIEW</a> <span class="pull-right">Rs. <?php echo number_format($price) ?></span></h4>
 								</div>
 							</div>
 						</li>
+						<?php } ?>
+
+
 
 					</ul>
 
@@ -198,66 +250,42 @@
 						<div class="row-fluid">
 							<div id="newProductCar" class="carousel slide">
 								<div class="carousel-inner">
+
 									<div class="item active">
+
 										<div class="thumbnails">
+
+											<?php
+
+											$rows =mysqli_query($con,"SELECT * FROM jewelry ORDER BY id  LIMIT 4" ) or die(mysqli_error($con));
+											$n=0;
+
+											while($row=mysqli_fetch_array($rows)){
+
+											  $slug = $row['slug']; 
+											  $name = $row['name']; 
+											  $metak = $row['metak']; 
+											  $metad = $row['metad']; 
+											  $img = $row['img']; 
+											  $price = $row['price']; 
+											  $ordr = $row['ordr']; 
+											  $id = $row['id']; 
+
+
+											  ?>
 											<div class="col-md-3">
 
 												<div class="thumbnail">
-													<a class="vidtool viewf " href="product_detail.php" title="add to cart"><span class="icon-play"></span> </a>
+													<a class="vidtool viewf " href="djewelry.php?page_name=<?php echo $slug ?>" title="add to cart"><span class="icon-play"></span> </a>
 													<a href="#" class="tag"></a>
-													<a href="product_detail.php" id="xyz"><img src="assets/img/bootstrap-ring.png" alt="bootstrap-ring"></a>
+													<a href="djewelry.php?page_name=<?php echo $slug ?>" id="xyz"><img style="height: 150px" src="images/products/<?php echo $img ?>" alt="bootstrap-ring"></a>
 
 
 												</div>
 											</div>
-											<div class="col-md-3">
-												<div class="thumbnail">
-													<a class="vidtool viewf " href="product_detail.php" title="add to cart"><span class="icon-play"></span> </a>
-													<a href="#" class="tag"></a>
-													<a  href="product_detail.php" id="xyz1"><img src="assets/img/i.jpg" alt=""></a>
-												</div>
-											</div>
-											<div class="col-md-3">
-												<div class="thumbnail">
-													<a class="vidtool viewf " href="product_detail.php" title="add to cart"><span class="icon-play"></span> </a>
-													<a href="#" class="tag"></a>
-													<a  href="product_detail.php" id="xyz2"><img src="assets/img/g.jpg" alt=""></a>
-												</div>
-											</div>
-											<div class="col-md-3">
-												<div class="thumbnail">
-													<a class="vidtool viewf " href="product_detail.php" title="add to cart"><span class="icon-play"></span> </a>
-													<a  href="product_detail.php"><img src="assets/img/s.png" alt=""></a>
-												</div>
-											</div>
-										</div>
-									</div>
-									<div class="item">
-										<div class="thumbnails">
-											<div class="col-md-3">
-												<div class="thumbnail">
-													<a class="vidtool viewf " href="product_detail.php" title="add to cart"><span class="icon-play"></span> </a>
-													<a  href="product_detail.php"><img src="assets/img/i.jpg" alt=""></a>
-												</div>
-											</div>
-											<div class="col-md-3">
-												<div class="thumbnail">
-													<a class="vidtool viewf " href="product_detail.php" title="add to cart"><span class="icon-play"></span> </a>
-													<a  href="product_detail.php"><img src="assets/img/f.jpg" alt=""></a>
-												</div>
-											</div>
-											<div class="col-md-3">
-												<div class="thumbnail">
-													<a class="vidtool viewf " href="product_detail.php" title="add to cart"><span class="icon-play"></span> </a>
-													<a  href="product_detail.php"><img src="assets/img/h.jpg" alt=""></a>
-												</div>
-											</div>
-											<div class="col-md-3">
-												<div class="thumbnail">
-													<a class="vidtool viewf " href="product_detail.php" title="add to cart"><span class="icon-play"></span> </a>
-													<a  href="product_detail.php"><img src="assets/img/j.jpg" alt=""></a>
-												</div>
-											</div>
+
+										<?php } ?>
+											
 										</div>
 									</div>
 								</div>
@@ -269,118 +297,126 @@
 					</div>
 
 
+
+
+					<div class="well well-small">
+						Best Makeup Products 
+					</div><div class="row">
+						<div class="thumbnails">
+
+							
+							<?php
+
+							$rows =mysqli_query($con,"SELECT * FROM makeup  ORDER BY ordr LIMIT 4" ) or die(mysqli_error($con));
+							$n=0;
+
+							while($row=mysqli_fetch_array($rows)){
+
+							  $slug = $row['slug']; 
+							  $name = $row['name']; 
+							  $metak = $row['metak']; 
+							  $metad = $row['metad']; 
+							  $img = $row['img']; 
+							  $price = $row['price']; 
+							  $ordr = $row['ordr']; 
+							  $id = $row['id']; 
+							  $feat = $row['feat']; 
+
+							  ?>
+							  <form action="" method="get">
+
+							<div class="col-md-3">
+								<div class="thumbnail">
+									<a class="vidtool viewf" href="dmakeup.php?page_name=<?php echo $slug ?>" title="add to cart"><span class="icon-play"></span> </a>
+									<a href="dmakeup.php?page_name=<?php echo $slug ?>"><img style="height: 200px;" src="images/products/<?php echo $img ?>" alt=""></a>
+									<div class="caption cntr">
+										<p><?php echo $name ?></p>
+										<p><strong>Rs. <?php echo number_format($price) ?></strong></p>
+										<h4><button class="shopBtn atcm" name="addcart" value="<?php echo $slug ?>"> Add to cart </button></h4>
+										<input style="display: none" name="type" value="makeup" name="type"> 
+										
+
+
+									</div>
+								</div>
+							</div>
+							</form>
+
+						<?php } ?>
+
+
+
+
+
+						</div>
+					</div>
+
+
+
+					<div class="well well-small">
+						Featured Jewelry Products 
+					</div><div class="row">
+						<div class="thumbnails">
+
+							
+							<?php
+
+							$rows =mysqli_query($con,"SELECT * FROM jewelry  ORDER BY ordr LIMIT 4" ) or die(mysqli_error($con));
+							$n=0;
+
+							while($row=mysqli_fetch_array($rows)){
+
+							  $slug = $row['slug']; 
+							  $name = $row['name']; 
+							  $metak = $row['metak']; 
+							  $metad = $row['metad']; 
+							  $img = $row['img']; 
+							  $price = $row['price']; 
+							  $ordr = $row['ordr']; 
+							  $id = $row['id']; 
+							  $feat = $row['feat']; 
+
+							  ?>
+
+							  <form action="" method="get">
+
+							<div class="col-md-3">
+								<div class="thumbnail">
+									<a class="vidtool viewf" href="jewelry.php?page_name=<?php echo $slug ?>" title="add to cart"><span class="icon-play"></span> </a>
+									<a href="jewelry.php?page_name=<?php echo $slug ?>"><img style="height: 200px;" src="images/products/<?php echo $img ?>" alt=""></a>
+									<div class="caption cntr">
+										<p><?php echo $name ?></p>
+										<p><strong>Rs. <?php echo number_format($price) ?></strong></p>
+										<h4><button class="shopBtn atcm" name="addcart" value="<?php echo $slug ?>"> Add to cart </button></h4>
+
+										<input style="display: none" name="type" value="jewelry" name="type"> 
+
+
+
+									</div>
+								</div>
+							</div>
+							</form>
+
+						<?php } ?>
+
+
+
+
+
+						</div>
+					</div>
+
+
+					<!--
+
 					<div class="well well-small">
 						Discount Products 
 					</div>
 					<div class="row">
 						<div class="thumbnails">
 
-							<div class="col-md-3">
-								<div class="thumbnail">
 
-									<a class="vidtool viewf " href="product_detail.php" title="add to cart"><span class="icon-play"></span> </a>
-									<a href="product_detail.php"><img src="assets/img/b.jpg" alt=""></a>
-									<div class="caption cntr">
-										<p>Item Name</p>
-										<p style="text-decoration:line-through;"><strong> $22.00</strong></p>
-										<p><strong> $20.00</strong></p>
-										<h4><a class="shopBtn atcm" href="#" title="add to cart"> Add to cart </a></h4>
-
-
-
-									</div>
-								</div>
-							</div>
-							<div class="col-md-3">
-								<div class="thumbnail">
-
-									<a class="vidtool viewf " href="product_detail.php" title="add to cart"><span class="icon-play"></span> </a>
-									<a href="product_detail.php"><img src="assets/img/h.jpg" alt=""></a>
-									<div class="caption cntr">
-										<p>Item Name</p>
-										<p style="text-decoration:line-through;"><strong> $22.00</strong></p>
-										<p><strong> $20.00</strong></p>
-										<h4><a class="shopBtn atcm" href="#" title="add to cart"> Add to cart </a></h4>
-
-
-
-									</div>
-								</div>
-							</div>
-							<div class="col-md-3">
-								<div class="thumbnail">
-
-									<a class="vidtool viewf " href="product_detail.php" title="add to cart"><span class="icon-play"></span> </a>
-									<a href="product_detail.php"><img src="assets/img/i.jpg" alt=""></a>
-									<div class="caption cntr">
-										<p>Item Name</p>
-										<p><strong> $22.00</strong></p>
-										<h4><a class="shopBtn atcm" href="#" title="add to cart"> Add to cart </a></h4>
-
-
-
-									</div>
-								</div>
-							</div>
-							<div class="col-md-3">
-								<div class="thumbnail">
-
-									<a class="vidtool viewf " href="product_detail.php" title="add to cart"><span class="icon-play"></span> </a>
-									<a href="product_detail.php"><img src="assets/img/b.jpg" alt=""></a>
-									<div class="caption cntr">
-										<p>Item Name</p>
-										<p style="text-decoration:line-through;"><strong> $22.00</strong></p>
-										<p><strong> $20.00</strong></p>
-										<h4><a class="shopBtn atcm" href="#" title="add to cart"> Add to cart </a></h4>
-
-
-
-									</div>
-								</div>
-							</div>
-							<div class="col-md-3">
-								<div class="thumbnail">
-									<a class="vidtool viewf" href="product_detail.php" title="add to cart"><span class="icon-play"></span> </a>
-									<a href="product_detail.php"><img src="assets/img/c.jpg" alt=""></a>
-									<div class="caption cntr">
-										<p>Item Name</p>
-										<p style="text-decoration:line-through;"><strong> $22.00</strong></p>
-										<p><strong> $20.00</strong></p>
-										<h4><a class="shopBtn atcm" href="#" title="add to cart"> Add to cart </a></h4>
-
-
-
-									</div>
-								</div>
-							</div>
-							<div class="col-md-3">
-								<div class="thumbnail">
-									<a class="vidtool viewf" href="product_detail.php" title="add to cart"><span class="icon-play"></span> </a>
-									<a href="product_detail.php"><img src="assets/img/a.jpg" alt=""></a>
-									<div class="caption cntr">
-										<p>Item Name</p>
-										<p><strong> $22.00</strong></p>
-										<h4><a class="shopBtn atcm" href="#" title="add to cart"> Add to cart </a></h4>
-
-
-									</div>
-								</div>
-							</div>
-							<div class="col-md-3">
-								<div class="thumbnail">
-									<a class="vidtool viewf" href="product_detail.php" title="add to cart"><span class="icon-play"></span> </a>
-									<a href="product_detail.php"><img src="assets/img/j.jpg" alt=""></a>
-									<div class="caption cntr">
-										<p>Item Name</p>
-										<p style="text-decoration:line-through;"><strong> $22.00</strong></p>
-										<p><strong> $20.00</strong></p>
-										<h4><a class="shopBtn atcm" href="#" title="add to cart"> Add to cart </a></h4>
-
-
-
-									</div>
-								</div>
-							</div>
 
 							<div class="col-md-3">
 								<div class="thumbnail">
@@ -398,73 +434,113 @@
 								</div>
 							</div>
 
+
+
+
+
 						</div>
 					</div>
-
+-->
 
 					<div class="well well-small">
-						Under Rs. 999/- Products 
+						Under Rs. 9,999/- Products 
 					</div>
 					<div class="row">
 						<div class="thumbnails">
 
-							<div class="col-md-3">
-								<div class="thumbnail">
+							
+								
+								<?php
 
-									<a class="vidtool viewf " href="product_detail.php" title="add to cart"><span class="icon-play"></span> </a>
-									<a href="product_detail.php"><img src="assets/img/b.jpg" alt=""></a>
-									<div class="caption cntr">
-										<p>Item Name</p>
-										<p><strong> $22.00</strong></p>
-										<h4><a class="shopBtn atcm" href="#" title="add to cart"> Add to cart </a></h4>
+								$rows =mysqli_query($con,"SELECT * FROM jewelry where price<10000  ORDER BY rand() LIMIT 2" ) or die(mysqli_error($con));
+								$n=0;
+
+								while($row=mysqli_fetch_array($rows)){
+
+								  $slug = $row['slug']; 
+								  $name = $row['name']; 
+								  $metak = $row['metak']; 
+								  $metad = $row['metad']; 
+								  $img = $row['img']; 
+								  $price = $row['price']; 
+								  $ordr = $row['ordr']; 
+								  $id = $row['id']; 
+								  $feat = $row['feat']; 
+
+								  ?>
+
+								  <form action="" method="get">
+
+								<div class="col-md-3">
+									<div class="thumbnail">
+										<a class="vidtool viewf" href="jewelry.php?page_name=<?php echo $slug ?>" title="add to cart"><span class="icon-play"></span> </a>
+										<a href="jewelry.php?page_name=<?php echo $slug ?>"><img style="height: 200px;" src="images/products/<?php echo $img ?>" alt=""></a>
+										<div class="caption cntr">
+											<p><?php echo $name ?></p>
+											<p><strong>Rs. <?php echo number_format($price) ?></strong></p>
+										<h4><button class="shopBtn atcm" name="addcart" value="<?php echo $slug ?>"> Add to cart </button></h4>
+
+										<input style="display: none" name="type" value="jewelry" name="type"> 
 
 
 
+										</div>
 									</div>
 								</div>
-							</div>
-							<div class="col-md-3">
-								<div class="thumbnail">
 
-									<a class="vidtool viewf " href="product_detail.php" title="add to cart"><span class="icon-play"></span> </a>
-									<a href="product_detail.php"><img src="assets/img/h.jpg" alt=""></a>
-									<div class="caption cntr">
-										<p>Item Name</p>
-										<p><strong> $22.00</strong></p>
-										<h4><a class="shopBtn atcm" href="#" title="add to cart"> Add to cart </a></h4>
+							</form>
+
+							<?php } ?>
 
 
 
+
+
+								<?php
+
+								$rows =mysqli_query($con,"SELECT * FROM makeup where price<10000  ORDER BY rand() LIMIT 2" ) or die(mysqli_error($con));
+								$n=0;
+
+								while($row=mysqli_fetch_array($rows)){
+
+								  $slug = $row['slug']; 
+								  $name = $row['name']; 
+								  $metak = $row['metak']; 
+								  $metad = $row['metad']; 
+								  $img = $row['img']; 
+								  $price = $row['price']; 
+								  $ordr = $row['ordr']; 
+								  $id = $row['id']; 
+								  $feat = $row['feat']; 
+
+								  ?>
+
+							  <form action="" method="get">
+
+								<div class="col-md-3">
+									<div class="thumbnail">
+										<a class="vidtool viewf" href="makeup.php?page_name=<?php echo $slug ?>" title="add to cart"><span class="icon-play"></span> </a>
+										<a href="makeup.php?page_name=<?php echo $slug ?>"><img style="height: 200px;" src="images/products/<?php echo $img ?>" alt=""></a>
+										<div class="caption cntr">
+											<p><?php echo $name ?></p>
+											<p><strong>Rs. <?php echo number_format($price) ?></strong></p>
+										<h4><button class="shopBtn atcm" name="addcart" value="<?php echo $slug ?>"> Add to cart </button></h4>
+										<input style="display: none" name="type" value="makeup" name="type"> 
+
+
+
+										</div>
 									</div>
 								</div>
-							</div>
-							<div class="col-md-3">
-								<div class="thumbnail">
-									<a class="vidtool viewf" href="product_detail.php" title="add to cart"><span class="icon-play"></span> </a>
-									<a href="product_detail.php"><img src="assets/img/c.jpg" alt=""></a>
-									<div class="caption cntr">
-										<p>Item Name</p>
-										<p><strong> $22.00</strong></p>
-										<h4><a class="shopBtn atcm" href="#" title="add to cart"> Add to cart </a></h4>
+							</form>
+
+							<?php } ?>
 
 
 
-									</div>
-								</div>
-							</div>
-							<div class="col-md-3">
-								<div class="thumbnail">
-									<a class="vidtool viewf" href="product_detail.php" title="add to cart"><span class="icon-play"></span> </a>
-									<a href="product_detail.php"><img src="assets/img/a.jpg" alt=""></a>
-									<div class="caption cntr">
-										<p>Item Name</p>
-										<p><strong> $22.00</strong></p>
-										<h4><a class="shopBtn atcm" href="#" title="add to cart"> Add to cart </a></h4>
 
 
-									</div>
-								</div>
-							</div>
+
 
 
 						</div>
@@ -492,16 +568,16 @@
 								jsFileLocation:"//insideweb.com.pk/wp-content/plugins/revslider/public/assets/sliderjs/",
 								sliderLayout:"fullwidth",
 								dottedOverlay:"none",
-								delay:9000,
+								delay:1500,
 								navigation: {
-									keyboardNavigation:"off",
+									keyboardNavigation:"on",
 									keyboard_direction: "horizontal",
 									mouseScrollNavigation:"off",
 									mouseScrollReverse:"default",
 									onHoverStop:"off",
 									touch:{
 										touchenabled:"on",
-										touchOnDesktop:"off",
+										touchOnDesktop:"on",
 										swipe_threshold: 75,
 										swipe_min_touches: 50,
 										swipe_direction: "horizontal",
@@ -582,7 +658,6 @@
 								spinner:"off",
 								stopLoop:"on",
 								stopAfterLoops:0,
-								stopAtSlide:1,
 								shuffle:"off",
 								autoHeight:"off",
 								hideThumbsOnMobile:"off",
